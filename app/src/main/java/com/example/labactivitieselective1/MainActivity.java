@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button button, button2;
+    Button button, button2, button3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
 
         });
+        button3 = findViewById(R.id.button3);
+        button3.setOnClickListener(v ->{
 
+            Intent i = new Intent(MainActivity.this, BookLibraryApp.class);
+            startActivity(i);
+
+        });
 
     }
 }
