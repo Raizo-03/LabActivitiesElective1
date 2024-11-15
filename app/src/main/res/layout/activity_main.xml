@@ -68,10 +68,18 @@
         android:id="@+id/btn2ndguided"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
         android:text="2nd Guided"
         app:layout_constraintStart_toStartOf="@+id/btn1stguided"
         app:layout_constraintTop_toBottomOf="@+id/btn1stguided" />
+
+    <Button
+        android:id="@+id/btn3rdguided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3rd Guided"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="255dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

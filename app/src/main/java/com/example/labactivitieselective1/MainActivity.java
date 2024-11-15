@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button button, button2, button3, button4, button5, btn1stguided, btn2ndguided;
+    Button button, button2, button3, button4, button5, btn1stguided, btn2ndguided, btn3rdguided;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +66,11 @@ public class MainActivity extends AppCompatActivity {
         btn2ndguided = findViewById(R.id.btn2ndguided);
         btn2ndguided.setOnClickListener(v ->{
             Intent i = new Intent(MainActivity.this, Second_Guided.class);
+            startActivity(i);
+        });
+        btn3rdguided= findViewById(R.id.btn3rdguided);
+        btn3rdguided.setOnClickListener(v ->{
+            Intent i = new Intent(MainActivity.this, ThirdGuided.class);
             startActivity(i);
         });
     }
