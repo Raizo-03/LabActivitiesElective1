@@ -12,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CC Jitters"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button2"
@@ -48,16 +48,30 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="218dp"
         android:text="Calculator"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="465dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button" />
 
     <Button
         android:id="@+id/btn1stguided"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="133dp"
         android:text="1st Guided"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="133dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn2ndguided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="4dp"
+        android:text="2nd Guided"
+        app:layout_constraintStart_toStartOf="@+id/btn1stguided"
+        app:layout_constraintTop_toBottomOf="@+id/btn1stguided" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
