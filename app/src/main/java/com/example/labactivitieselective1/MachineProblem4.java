@@ -206,9 +206,5 @@ public class MachineProblem4 extends AppCompatActivity {
         Intent intent = new Intent(this, MachineProblem4Result.class);
         intent.putExtra("EmployeeID", employeeID.getSelectedItem().toString());
         startActivity(intent);
-
-
-
-
     }
 }

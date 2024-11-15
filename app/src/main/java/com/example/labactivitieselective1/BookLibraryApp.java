@@ -3,6 +3,7 @@ package com.example.labactivitieselective1;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,24 +11,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
-
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class BookLibraryApp extends AppCompatActivity {
+
     RecyclerView recyclerView;
     FloatingActionButton add_button;
     Toolbar toolbar;
@@ -39,12 +39,11 @@ public class BookLibraryApp extends AppCompatActivity {
     ImageView empty_imageview;
     TextView textView3;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_book_library_app);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -54,7 +53,7 @@ public class BookLibraryApp extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Book Library");
         }
 
@@ -63,11 +62,10 @@ public class BookLibraryApp extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         add_button = findViewById(R.id.btnAdd);
-        add_button.setOnClickListener(v ->{
+        add_button.setOnClickListener(v -> {
             Intent intent = new Intent(BookLibraryApp.this, AddActivity.class);
             startActivity(intent);
         });
-
 
         myDB = new MyDatabaseHelper(BookLibraryApp.this);
         book_id = new ArrayList<>();
@@ -75,58 +73,58 @@ public class BookLibraryApp extends AppCompatActivity {
         book_author = new ArrayList<>();
         book_pages = new ArrayList<>();
 
-
         storeDataInArrays();
 
-
-        customAdapter = new CustomAdapter(BookLibraryApp.this,this, book_id, book_title, book_author, book_pages);
+        customAdapter = new CustomAdapter(BookLibraryApp.this, this, book_id, book_title, book_author, book_pages);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(BookLibraryApp.this));
-
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 1){
-            recreate();
-        }
+    protected void onResume() {
+        super.onResume();
+        book_id.clear();
+        book_title.clear();
+        book_author.clear();
+        book_pages.clear();
+        storeDataInArrays();
+        customAdapter.notifyDataSetChanged();
     }
 
-    void storeDataInArrays(){
+    void storeDataInArrays() {
         Cursor cursor = myDB.readAllData();
-        if(cursor.getCount() == 0) {
+        if (cursor.getCount() == 0) {
             empty_imageview.setVisibility(View.VISIBLE);
             textView3.setVisibility(View.VISIBLE);
-        }else {
-            while(cursor.moveToNext()){
+        } else {
+            while (cursor.moveToNext()) {
                 book_id.add(cursor.getString(0));
                 book_title.add(cursor.getString(1));
                 book_author.add(cursor.getString(2));
                 book_pages.add(cursor.getString(3));
-                empty_imageview.setVisibility(View.GONE);
-                textView3.setVisibility(View.GONE);
             }
+            empty_imageview.setVisibility(View.GONE);
+            textView3.setVisibility(View.GONE);
         }
-
+        cursor.close(); // Close cursor to avoid memory leak
     }
 
+    @Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.my_menu, menu);
         return super.onCreateOptionsMenu(menu);
-
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.delete_all){
+        if (item.getItemId() == R.id.delete_all) {
             confirmDialog();
         }
         return super.onOptionsItemSelected(item);
     }
 
-    void confirmDialog(){
+    void confirmDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete all" + "?");
         builder.setMessage("Are you sure you want to delete all books?");
@@ -141,8 +139,7 @@ public class BookLibraryApp extends AppCompatActivity {
 
         builder.setNegativeButton("No", (dialog, which) -> {
             Toast.makeText(this, "Cancelled", Toast.LENGTH_SHORT).show();
-
         });
-        builder.show(); // Show the dialog
+        builder.show();
     }
 }

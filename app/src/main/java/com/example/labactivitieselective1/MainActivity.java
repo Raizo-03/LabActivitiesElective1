@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button button, button2, button3, button4;
+    Button button, button2, button3, button4, button5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +51,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
 
         });
+
+        button5 = findViewById(R.id.button5);
+        button5.setOnClickListener(v ->{
+            Intent i = new Intent(MainActivity.this, calculator.class);
+            startActivity(i);
+        });
+
 
     }
 }
