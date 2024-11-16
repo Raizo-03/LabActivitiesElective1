@@ -93,4 +93,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn3rdguided" />
 
+    <Button
+        android:id="@+id/btn5thguided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="5th Guided"
+        app:layout_constraintBottom_toTopOf="@+id/btn2ndguided"
+        app:layout_constraintStart_toEndOf="@+id/btn2ndguided" />
+
+    <Button
+        android:id="@+id/btn6thguided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="16dp"
+        android:text="6th Guided"
+        app:layout_constraintStart_toStartOf="@+id/btn5thguided"
+        app:layout_constraintTop_toBottomOf="@+id/btn5thguided" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
