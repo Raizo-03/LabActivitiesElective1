@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button button, button2, button3, button4, button5, btn1stguided, btn2ndguided, btn3rdguided, btn4thguided, btn5thguided, btn6thguided;
+    Button button, button2, button3, button4, button5, btn1stguided, btn2ndguided, btn3rdguided, btn4thguided, btn5thguided, btn6thguided, btn7thguided;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,6 +91,10 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(MainActivity.this, SixthGuided.class);
             startActivity(i);
         });
-
+        btn7thguided = findViewById(R.id.btn7thguided);
+        btn7thguided.setOnClickListener(v ->{
+            Intent i = new Intent(MainActivity.this, SeventhGuided.class);
+            startActivity(i);
+        });
     }
 }

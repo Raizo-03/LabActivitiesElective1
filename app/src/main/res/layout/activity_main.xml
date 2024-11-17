@@ -113,4 +113,14 @@
         app:layout_constraintStart_toStartOf="@+id/btn5thguided"
         app:layout_constraintTop_toBottomOf="@+id/btn5thguided" />
 
+    <Button
+        android:id="@+id/btn7thguided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="88dp"
+        android:text="7th Guided"
+        app:layout_constraintStart_toStartOf="@+id/btn5thguided"
+        app:layout_constraintTop_toBottomOf="@+id/btn5thguided" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
