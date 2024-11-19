@@ -14,6 +14,7 @@
         android:text="CC Jitters"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -39,7 +40,7 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:text="Payroll SQL"
         app:layout_constraintBaseline_toBaselineOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent" />
@@ -49,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
-        android:layout_marginBottom="218dp"
+        android:layout_marginBottom="216dp"
         android:text="Calculator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button" />
@@ -58,8 +59,8 @@
         android:id="@+id/btn1stguided"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="133dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
         android:text="1st Guided"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -69,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:text="2nd Guided"
         app:layout_constraintStart_toStartOf="@+id/btn1stguided"
         app:layout_constraintTop_toBottomOf="@+id/btn1stguided" />
@@ -78,7 +79,7 @@
         android:id="@+id/btn3rdguided"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="12dp"
         android:text="3rd Guided"
         app:layout_constraintStart_toStartOf="@+id/btn2ndguided"
         app:layout_constraintTop_toBottomOf="@+id/btn2ndguided" />
@@ -87,8 +88,8 @@
         android:id="@+id/btn4thguided"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:text="4th Guided"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn3rdguided" />
@@ -118,9 +119,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="96dp"
         android:text="7th Guided"
         app:layout_constraintStart_toStartOf="@+id/btn5thguided"
         app:layout_constraintTop_toBottomOf="@+id/btn5thguided" />
+
+    <Button
+        android:id="@+id/btn8thguided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="8th Guided"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn4thguided"
+        app:layout_constraintStart_toEndOf="@+id/btn4thguided" />
+
+    <Button
+        android:id="@+id/btn9thguided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="9th Guided"
+        app:layout_constraintStart_toStartOf="@+id/btn8thguided"
+        app:layout_constraintTop_toBottomOf="@+id/btn8thguided" />
+
+    <Button
+        android:id="@+id/btn10thguided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="10th Guided"
+        app:layout_constraintBottom_toBottomOf="@+id/btn8thguided"
+        app:layout_constraintStart_toEndOf="@+id/btn9thguided"
+        app:layout_constraintTop_toBottomOf="@+id/btn8thguided" />
+
+    <Button
+        android:id="@+id/btn11thguided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="14dp"
+        android:text="11th Guided"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn9thguided" />
+
+    <Button
+        android:id="@+id/btn12thguided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:text="Splash Screen"
+        app:layout_constraintStart_toStartOf="@+id/btn11thguided"
+        app:layout_constraintTop_toBottomOf="@+id/btn11thguided" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button button, button2, button3, button4, button5, btn1stguided, btn2ndguided, btn3rdguided, btn4thguided, btn5thguided, btn6thguided, btn7thguided;
+    Button button, button2, button3, button4, button5, btn1stguided, btn2ndguided, btn3rdguided, btn4thguided, btn5thguided, btn6thguided, btn7thguided, btn8thguided, btn9thguided;
+    Button btn10thguided, btn11thguided, btn12thguided, btn13thguided, btn14thguided, btn15thguided;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,5 +97,38 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(MainActivity.this, SeventhGuided.class);
             startActivity(i);
         });
+
+        btn8thguided= findViewById(R.id.btn8thguided);
+        btn8thguided.setOnClickListener(v ->{
+            Intent i = new Intent(MainActivity.this, EighthGuided.class);
+            startActivity(i);
+        });
+
+        btn9thguided = findViewById(R.id.btn9thguided);
+        btn9thguided.setOnClickListener(v ->{
+            Intent i = new Intent(MainActivity.this, NinthGuided.class);
+            startActivity(i);
+        });
+
+        btn10thguided= findViewById(R.id.btn10thguided);
+        btn10thguided.setOnClickListener(v ->{
+            Intent i = new Intent(MainActivity.this, TenthGuided.class);
+            startActivity(i);
+        });
+
+        btn11thguided = findViewById(R.id.btn11thguided);
+        btn11thguided.setOnClickListener(v ->{
+            Intent i = new Intent(MainActivity.this, EleventhGuided.class);
+            startActivity(i);
+        });
+
+        btn12thguided = findViewById(R.id.btn12thguided);
+        btn12thguided.setOnClickListener(v ->{
+            Intent i = new Intent(MainActivity.this, TwelvethGuided.class);
+            startActivity(i);
+        });
+
+
+
     }
 }

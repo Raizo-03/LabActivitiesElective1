@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EleventhGuided">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Intent Guided Exercise"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Full Name -->
+            <EditText
+                android:id="@+id/etNameGE11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Age -->
+            <EditText
+                android:id="@+id/etAgeGE11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Age"
+                android:inputType="number"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Gender -->
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender:"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbtnMaleGE11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/rbtnFemaleGE11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+            </RadioGroup>
+
+            <!-- Favorite Computer Subjects -->
+            <TextView
+                android:id="@+id/tv_subjects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is/are your favorite computer subject/s?"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:layout_marginBottom="16dp">
+
+                <CheckBox
+                    android:id="@+id/chkAppdetGE11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="APPDEV" />
+
+                <CheckBox
+                    android:id="@+id/chkComprog1GE11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd= "150dp"
+                    android:text="COMPROG1" />
+
+                <CheckBox
+                    android:id="@+id/chkIntcompGE11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INTCOMP" />
+
+                <CheckBox
+                    android:id="@+id/chkComprog2GE11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd= "150dp"
+                    android:text="COMPROG2" />
+            </GridLayout>
+
+            <!-- Job Preference -->
+            <TextView
+                android:id="@+id/tv_job_preference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What job do you prefer after graduation?"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/spnrJobGE11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Thesis Topic -->
+            <TextView
+                android:id="@+id/tv_thesis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Which do you prefer for a thesis topic/title?"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+            <ListView
+                android:id="@+id/lvThesisGE11"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:divider="@android:color/darker_gray"
+                android:dividerHeight="0dp" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btnSubmitGE11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SUBMIT"
+                android:backgroundTint="@color/black"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
