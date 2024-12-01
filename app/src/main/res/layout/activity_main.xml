@@ -28,19 +28,21 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="129dp"
+        android:layout_width="0dp"
         android:layout_height="42dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="35dp"
         android:text="Book Library"
-        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/btnSQLiteGuided"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="148dp"
         android:text="Payroll SQL"
         app:layout_constraintBaseline_toBaselineOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent" />
@@ -172,5 +174,16 @@
         android:text="Splash Screen"
         app:layout_constraintStart_toStartOf="@+id/btn11thguided"
         app:layout_constraintTop_toBottomOf="@+id/btn11thguided" />
+
+    <Button
+        android:id="@+id/btnSQLiteGuided"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="88dp"
+        android:text="SQLite Guided"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

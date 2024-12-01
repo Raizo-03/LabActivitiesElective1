@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     Button button, button2, button3, button4, button5, btn1stguided, btn2ndguided, btn3rdguided, btn4thguided, btn5thguided, btn6thguided, btn7thguided, btn8thguided, btn9thguided;
-    Button btn10thguided, btn11thguided, btn12thguided, btn13thguided, btn14thguided, btn15thguided;
+    Button btn10thguided, btn11thguided, btn12thguided, btnSQLiteGuided , btn14thguided, btn15thguided;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,7 +128,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-
+        btnSQLiteGuided = findViewById(R.id.btnSQLiteGuided);
+        btnSQLiteGuided.setOnClickListener(v ->{
+            Intent i = new Intent(MainActivity.this, SQLiteGuided.class);
+            startActivity(i);
+        });
 
     }
 }
