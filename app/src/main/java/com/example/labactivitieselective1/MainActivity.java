@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     Button button, button2, button3, button4, button5, btn1stguided, btn2ndguided, btn3rdguided, btn4thguided, btn5thguided, btn6thguided, btn7thguided, btn8thguided, btn9thguided;
-    Button btn10thguided, btn11thguided, btn12thguided, btnSQLiteGuided , btnDragDrop, btn15thguided;
+    Button btn10thguided, btn11thguided, btn12thguided, btnSQLiteGuided , btnDragDrop, btnNotificationBroadcast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -139,6 +139,12 @@ public class MainActivity extends AppCompatActivity {
         btnDragDrop = findViewById(R.id.btnDragDrop);
         btnDragDrop.setOnClickListener(v ->{
             Intent i = new Intent(MainActivity.this, DragandDrop.class);
+            startActivity(i);
+        });
+
+        btnNotificationBroadcast = findViewById(R.id.btnNotificationBroadcast);
+        btnNotificationBroadcast.setOnClickListener(v ->{
+            Intent i = new Intent(MainActivity.this, BroadcastNotification.class);
             startActivity(i);
         });
 
