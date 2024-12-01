@@ -5,6 +5,91 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="@color/white"
     tools:context=".SMS">
+
+    <LinearLayout
+        android:layout_width="309dp"
+        android:layout_height="528dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="SMS and Phone Call"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Phone Number Input -->
+        <EditText
+            android:id="@+id/etPhoneNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@android:drawable/edit_text"
+            android:hint="Phone No."
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:inputType="phone"
+            android:padding="12dp" />
+
+        <!-- Message Input -->
+        <EditText
+            android:id="@+id/etSMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@android:drawable/edit_text"
+            android:gravity="top"
+            android:hint="Message"
+            android:textColor="@color/black"
+            android:inputType="textMultiLine"
+            android:textColorHint="@color/black"
+            android:minHeight="100dp"
+            android:padding="12dp" />
+
+        <!-- Send Message Button -->
+        <Button
+            android:id="@+id/btnSMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#8000FF"
+            android:text="SEND MESSAGE HERE"
+            android:textColor="#FFFFFF" />
+
+        <!-- Built-in Messaging App Button -->
+        <Button
+            android:id="@+id/btnBSMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#8000FF"
+            android:text="BUILT-IN MESSAGE APP"
+            android:textColor="#FFFFFF" />
+
+        <!-- Call Button -->
+        <Button
+            android:id="@+id/btnPhoneCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#8000FF"
+            android:text="CALL"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

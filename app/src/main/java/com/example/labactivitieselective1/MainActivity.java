@@ -157,11 +157,9 @@ public class MainActivity extends AppCompatActivity {
 
         btnSMS = findViewById(R.id.btnSMS);
         btnSMS.setOnClickListener(v ->{
-            Intent i = new Intent(MainActivity.this, EmailCamera.class);
+            Intent i = new Intent(MainActivity.this, SMS.class);
             startActivity(i);
         });
-
-
 
 
 
