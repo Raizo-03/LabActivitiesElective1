@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -31,38 +32,27 @@ public class FifthGuided extends AppCompatActivity {
         blue = findViewById(R.id.rbBlue);
         yellow = findViewById(R.id.rbYellow);
         green = findViewById(R.id.rbGreen);
-        showSelectedColor();
     }
 
-    public void showSelectedColor(){
-        if(red.isChecked()){
-            Toast.makeText(getApplicationContext(),"Color: RED", Toast.LENGTH_SHORT).show();
-        }
-        if(blue.isChecked()){
-            Toast.makeText(getApplicationContext(),"Color: BLUE", Toast.LENGTH_SHORT).show();
-        }
-        if(yellow.isChecked()){
-            Toast.makeText(getApplicationContext(),"Color: YELLOW", Toast.LENGTH_SHORT).show();
-        }
-        if(green.isChecked()){
-            Toast.makeText(getApplicationContext(),"Color: GREEN", Toast.LENGTH_SHORT).show();
-        }
-    }
-
+    // This method is triggered when a RadioButton is clicked
     public void changeBackgroundColor(View view) {
+        ConstraintLayout mainLayout = findViewById(R.id.main); // Get the ConstraintLayout
         boolean checked = ((RadioButton) view).isChecked();
 
         if (checked) {
             if (view.getId() == R.id.rbRed) {
-                getWindow().getDecorView().setBackgroundColor(Color.RED);
+                mainLayout.setBackgroundColor(Color.RED);
+                Toast.makeText(this, "Color: RED", Toast.LENGTH_SHORT).show();
             } else if (view.getId() == R.id.rbBlue) {
-                getWindow().getDecorView().setBackgroundColor(Color.BLUE);
+                mainLayout.setBackgroundColor(Color.BLUE);
+                Toast.makeText(this, "Color: BLUE", Toast.LENGTH_SHORT).show();
             } else if (view.getId() == R.id.rbYellow) {
-                getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
+                mainLayout.setBackgroundColor(Color.YELLOW);
+                Toast.makeText(this, "Color: YELLOW", Toast.LENGTH_SHORT).show();
             } else if (view.getId() == R.id.rbGreen) {
-                getWindow().getDecorView().setBackgroundColor(Color.GREEN);
+                mainLayout.setBackgroundColor(Color.GREEN);
+                Toast.makeText(this, "Color: GREEN", Toast.LENGTH_SHORT).show();
             }
-            showSelectedColor();
         }
     }
 

@@ -5,6 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:context=".EleventhGuided">
     <ScrollView
         android:layout_width="match_parent"
@@ -25,6 +27,7 @@
                 android:text="Intent Guided Exercise"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_marginBottom="16dp" />
 
             <!-- Full Name -->
@@ -33,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Full Name"
+                android:textColor="@color/black"
                 android:inputType="textPersonName"
                 android:layout_marginBottom="8dp" />
 
@@ -42,6 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Age"
+                android:textColor="@color/black"
                 android:inputType="number"
                 android:layout_marginBottom="8dp" />
 
@@ -51,6 +56,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gender:"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
                 android:layout_marginBottom="8dp" />
 
             <RadioGroup
@@ -63,12 +71,14 @@
                     android:id="@+id/rbtnMaleGE11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Male" />
+                    android:text="Male"
+                    android:textColor="@color/black"/>
 
                 <RadioButton
                     android:id="@+id/rbtnFemaleGE11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="Female" />
             </RadioGroup>
 
@@ -79,6 +89,9 @@
                 android:layout_height="wrap_content"
                 android:text="What is/are your favorite computer subject/s?"
                 android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_marginBottom="8dp" />
 
             <GridLayout
@@ -92,6 +105,7 @@
                     android:id="@+id/chkAppdetGE11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="APPDEV" />
 
                 <CheckBox
@@ -100,12 +114,14 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_marginEnd= "150dp"
+                    android:textColor="@color/black"
                     android:text="COMPROG1" />
 
                 <CheckBox
                     android:id="@+id/chkIntcompGE11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="INTCOMP" />
 
                 <CheckBox
@@ -114,6 +130,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_marginEnd= "150dp"
+                    android:textColor="@color/black"
                     android:text="COMPROG2" />
             </GridLayout>
 
@@ -122,6 +139,9 @@
                 android:id="@+id/tv_job_preference"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:text="What job do you prefer after graduation?"
                 android:layout_marginBottom="8dp" />
 
@@ -137,6 +157,9 @@
                 android:layout_height="wrap_content"
                 android:text="Which do you prefer for a thesis topic/title?"
                 android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_marginBottom="8dp" />
 
             <ListView

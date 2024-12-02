@@ -5,7 +5,46 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:context=".ThirdGuided">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Header Image"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
+            android:text="INNOVATECH COMPILATION"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
+
+
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -21,6 +60,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"
+            android:textColor="@color/black"
             android:layout_gravity="center"
             android:paddingBottom="24dp" />
 
@@ -30,6 +70,7 @@
             android:layout_height="wrap_content"
             android:hint="First Number"
             android:inputType="numberDecimal"
+            android:textColor="@color/black"
             android:layout_marginBottom="16dp" />
 
         <EditText
@@ -38,20 +79,23 @@
             android:layout_height="wrap_content"
             android:hint="Second Number"
             android:inputType="numberDecimal"
+            android:textColor="@color/black"
             android:layout_marginBottom="24dp" />
 
         <Button
             android:id="@+id/btnSum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            style="@style/StyledButton"
             android:text="SUM"
             android:layout_gravity="center"
             android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/btnAverage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            style="@style/StyledButton"
             android:text="AVE"
             android:layout_gravity="center" />
     </LinearLayout>

@@ -5,7 +5,43 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:context=".PAYROLLSUMMARYDETAILS">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Header Image"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
+            android:text="INNOVATECH COMPILATION"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -113,6 +149,7 @@
         android:layout_marginBottom="76dp"
         android:text="EMPLOYEE PAYROLL COMPUTATION"
         android:textSize="17sp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,6 +164,7 @@
         android:layout_height="wrap_content"
         android:text="SUMMARY DETAILS"
         android:textSize="17sp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -155,6 +193,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:text="Employee ID:"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -164,6 +203,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:text="Name:"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -172,6 +212,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
+            android:textColor="@color/black"
             android:text="Position Code:"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -182,6 +223,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:text="CivilStatus:"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -190,6 +232,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
+            android:textColor="@color/black"
             android:text="No. of Days Worked:"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -200,6 +243,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:text="Basic Pay:"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -208,6 +252,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
+            android:textColor="@color/black"
             android:text="SSS Contribution:"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -218,6 +263,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:text="Witholding Tax:"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -226,6 +272,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Net Pay:"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 

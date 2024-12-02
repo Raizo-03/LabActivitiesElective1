@@ -5,7 +5,43 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:context=".calculator">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Header Image"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
+            android:text="INNOVATECH COMPILATION"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="315dp"
@@ -13,6 +49,7 @@
         android:fontFamily="sans-serif-black"
         android:text="SIMPLE CALCULATOR"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,13 +60,14 @@
         app:layout_constraintTop_toTopOf="parent"
 
 
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.135" />
 
     <EditText
         android:id="@+id/etFirstNumber"
         android:layout_width="310dp"
         android:layout_height="57dp"
         android:hint="Enter first number"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
 
 
@@ -45,6 +83,7 @@
         android:id="@+id/etSecondNumber"
         android:layout_width="316dp"
         android:layout_height="50dp"
+        android:textColor="@color/black"
         android:hint="Enter second number"
 
 
@@ -133,6 +172,7 @@
         android:textAlignment="center"
         android:fontFamily="sans-serif-black"
         android:text="Result"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

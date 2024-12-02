@@ -48,7 +48,10 @@ public class EmailCamera extends AppCompatActivity {
         // Set up the button listeners
         sendEmail();
         capturePic();
+        capturePic = findViewById(R.id.btnCapturePic);
+        capturePic.setVisibility(View.VISIBLE);
     }
+
     public void init() {
         receiver = findViewById(R.id.etReceiver);
         subject = findViewById(R.id.etSubject);
@@ -62,11 +65,11 @@ public class EmailCamera extends AppCompatActivity {
     ActivityResultLauncher<Intent> cameraLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
-                if (result.getResultCode() == RESULT_OK) {
+                if (result.getResultCode() == RESULT_OK && imageUri != null) {
                     // Display the captured image
                     pic.setImageURI(imageUri);
                 } else {
-                    Toast.makeText(EmailCamera.this, "Image capture cancelled", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EmailCamera.this, "Image capture cancelled or failed", Toast.LENGTH_SHORT).show();
                 }
             }
     );
@@ -75,14 +78,20 @@ public class EmailCamera extends AppCompatActivity {
         capturePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Prepare an intent to capture the image
+                // Prepare the URI for the captured image
                 ContentValues values = new ContentValues();
                 values.put(MediaStore.Images.Media.TITLE, "New Picture");
                 values.put(MediaStore.Images.Media.DESCRIPTION, "From Camera");
                 imageUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
 
+                if (imageUri == null) {
+                    Toast.makeText(EmailCamera.this, "Failed to create image URI", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // Launch the camera app
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri); // Save the captured image to the URI
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
 
                 try {
                     cameraLauncher.launch(intent);
@@ -123,10 +132,10 @@ public class EmailCamera extends AppCompatActivity {
     }
 
     public void enableRuntimePermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(EmailCamera.this, Manifest.permission.CAMERA)) {
-            Toast.makeText(getApplicationContext(), "CAMERA permission allows us to access the camera", Toast.LENGTH_LONG).show();
-        } else {
-            ActivityCompat.requestPermissions(EmailCamera.this, new String[]{Manifest.permission.CAMERA}, 1);
-        }
+        ActivityCompat.requestPermissions(
+                this,
+                new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                1
+        );
     }
 }

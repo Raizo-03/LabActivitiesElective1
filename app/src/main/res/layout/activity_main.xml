@@ -5,227 +5,242 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CC Jitters"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:text="Payroll"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="35dp"
-        android:text="Book Library"
-        app:layout_constraintEnd_toStartOf="@+id/btnSQLiteGuided"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:text="Payroll SQL"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Header Image"
+            android:src="@drawable/logo" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="216dp"
-        android:text="Calculator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
+            android:text="INNOVATECH COMPILATION"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
 
-    <Button
-        android:id="@+id/btn1stguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
-        android:text="1st Guided"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn2ndguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
-        android:text="2nd Guided"
-        app:layout_constraintStart_toStartOf="@+id/btn1stguided"
-        app:layout_constraintTop_toBottomOf="@+id/btn1stguided" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btn3rdguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="3rd Guided"
-        app:layout_constraintStart_toStartOf="@+id/btn2ndguided"
-        app:layout_constraintTop_toBottomOf="@+id/btn2ndguided" />
-
-    <Button
-        android:id="@+id/btn4thguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="4th Guided"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn3rdguided" />
-
-    <Button
-        android:id="@+id/btn5thguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="12dp"
-        android:text="5th Guided"
-        app:layout_constraintBottom_toTopOf="@+id/btn2ndguided"
-        app:layout_constraintStart_toEndOf="@+id/btn2ndguided" />
-
-    <Button
-        android:id="@+id/btn6thguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="16dp"
-        android:text="6th Guided"
-        app:layout_constraintStart_toStartOf="@+id/btn5thguided"
-        app:layout_constraintTop_toBottomOf="@+id/btn5thguided" />
-
-    <Button
-        android:id="@+id/btn7thguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="96dp"
-        android:text="7th Guided"
-        app:layout_constraintStart_toStartOf="@+id/btn5thguided"
-        app:layout_constraintTop_toBottomOf="@+id/btn5thguided" />
-
-    <Button
-        android:id="@+id/btn8thguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="8th Guided"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn4thguided"
-        app:layout_constraintStart_toEndOf="@+id/btn4thguided" />
-
-    <Button
-        android:id="@+id/btn9thguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:text="9th Guided"
-        app:layout_constraintStart_toStartOf="@+id/btn8thguided"
-        app:layout_constraintTop_toBottomOf="@+id/btn8thguided" />
-
-    <Button
-        android:id="@+id/btn10thguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:text="10th Guided"
-        app:layout_constraintBottom_toBottomOf="@+id/btn8thguided"
-        app:layout_constraintStart_toEndOf="@+id/btn9thguided"
-        app:layout_constraintTop_toBottomOf="@+id/btn8thguided" />
-
-    <Button
-        android:id="@+id/btn11thguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="14dp"
-        android:text="11th Guided"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn9thguided" />
-
-    <Button
-        android:id="@+id/btn12thguided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="3dp"
-        android:text="Splash Screen"
-        app:layout_constraintStart_toStartOf="@+id/btn11thguided"
-        app:layout_constraintTop_toBottomOf="@+id/btn11thguided" />
-
-    <Button
-        android:id="@+id/btnSQLiteGuided"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="88dp"
-        android:text="SQLite Guided"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
-
-    <Button
-        android:id="@+id/btnDragDrop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="Drag and Drop"
+    <LinearLayout
+        android:layout_width="202dp"
+        android:layout_height="651dp"
+        android:gravity="start"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.527" />
+        app:layout_constraintTop_toBottomOf="@+id/header"> <!-- Align buttons to the left -->
 
-    <Button
-        android:id="@+id/btnNotificationBroadcast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="36dp"
-        android:text="Notification Broadcast"
+        <Button
+            android:id="@+id/btn1stguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="1st Guided" />
+
+        <Button
+            android:id="@+id/btn2ndguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+
+            android:text="2nd Guided" />
+
+        <Button
+            android:id="@+id/btn3rdguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="3rd Guided" />
+
+        <Button
+            android:id="@+id/btn4thguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="4th Guided" />
+
+        <Button
+            android:id="@+id/btn5thguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="5th Guided" />
+
+        <Button
+            android:id="@+id/btn6thguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="6th Guided" />
+
+        <Button
+            android:id="@+id/btn7thguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="7th Guided" />
+
+        <Button
+            android:id="@+id/btn8thguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="8th Guided" />
+
+        <Button
+            android:id="@+id/btn9thguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="9th Guided" />
+
+        <Button
+            android:id="@+id/btn10thguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="10th Guided" />
+
+        <Button
+            android:id="@+id/btn11thguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="11th Guided" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="209dp"
+        android:layout_height="653dp"
+        android:gravity="start"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
 
-    <Button
-        android:id="@+id/btnEmailCamera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="8dp"
-        android:text="EmailCamera"
-        app:layout_constraintBottom_toTopOf="@+id/btn5thguided"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/button"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="CC Jitters" />
 
-    <Button
-        android:id="@+id/btnSMS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="10dp"
-        android:text="SMS"
-        app:layout_constraintBottom_toTopOf="@+id/btn5thguided"
-        app:layout_constraintEnd_toEndOf="@+id/btn5thguided" />
+        <Button
+            android:id="@+id/button2"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Payroll" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Book Library" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Payroll SQL" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Calculator" />
+
+
+        <Button
+            android:id="@+id/btn12thguided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Splash Screen" />
+
+        <Button
+            android:id="@+id/btnSQLiteGuided"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="SQLite Guided" />
+
+        <Button
+            android:id="@+id/btnDragDrop"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Drag and Drop" />
+
+        <Button
+            android:id="@+id/btnNotificationBroadcast"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Notification Broadcast" />
+
+        <Button
+            android:id="@+id/btnEmailCamera"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="EmailCamera" />
+
+        <Button
+            android:id="@+id/btnSMS"
+            style="@style/StyledButton"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="SMS" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

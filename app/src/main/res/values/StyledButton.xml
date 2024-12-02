@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="StyledButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">#3E3847</item> <!-- Black background -->
+        <item name="android:textColor">#1F1919</item> <!-- White text -->
+        <item name="android:layout_marginLeft">110dp</item>
+        <item name="android:layout_marginRight">110dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

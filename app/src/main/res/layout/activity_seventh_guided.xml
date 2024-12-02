@@ -5,7 +5,45 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:context=".SeventhGuided">
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Header Image"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
+            android:text="INNOVATECH COMPILATION"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/linearLayout8"
@@ -27,7 +65,8 @@
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
             android:text="Rating Bar and Alert Dialog \n Guided Exercise"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
 
         <!-- Rating Bar -->
         <RatingBar
@@ -48,13 +87,16 @@
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
             android:text="Rate: 2.0"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             />
 
         <!-- Button to Show Dialog -->
         <Button
             android:id="@+id/btnClickGE7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            style="@style/StyledButton"
             android:layout_gravity="center"
             android:layout_marginBottom="8dp"
             android:text="CLICK" />
@@ -62,8 +104,9 @@
         <!-- Button to Close Activity -->
         <Button
             android:id="@+id/btnCloseGE7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            style="@style/StyledButton"
             android:layout_gravity="center"
             android:text="CLOSE" />
     </LinearLayout>

@@ -5,7 +5,46 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:context=".Ge11IntentResult">
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/headerImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Header Image"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
+            android:text="INNOVATECH COMPILATION"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:id="@+id/linearLayout9"
@@ -28,6 +67,7 @@
             android:text="Intent Guided Exercise"
             android:layout_gravity="center"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <TextView
@@ -36,6 +76,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Name: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:textSize="16sp" />
 
         <TextView
@@ -43,6 +85,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:text="Age: "
             android:textSize="16sp" />
 
@@ -52,6 +96,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Gender: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:textSize="16sp" />
 
         <TextView
@@ -60,6 +106,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Subjects: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:textSize="16sp" />
 
         <TextView
@@ -68,6 +116,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Job: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:textSize="16sp" />
 
         <TextView
@@ -75,6 +125,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:text="Thesis Topic: "
             android:textSize="16sp" />
 
